@@ -8,26 +8,27 @@ let clearIcon = document.querySelector('.clear');
 
 clearIcon.addEventListener('click', () => {
     ul.innerHTML = ''
-tasks.style.display = 'none'
-        })
+    tasks.style.display = 'none'
+})
 
 clearIcon.addEventListener("mouseover", (e)=>{
     if(e.target.tagName==='IMG'){
-        e.target.src="assets/x2.png";
+        e.target.src="./assets/x2.png";
      }
 })
 clearIcon.addEventListener("mouseout", (e)=>{
     if(e.target.tagName==='IMG'){
-        e.target.src="assets/x.png";
+        e.target.src="./assets/x.png";
      }
 })
 
 function addFunction(){
+    input.value = input.value.trim();
     if (input.value !== '' && input.value !== ' ') {
         let li = document.createElement('li');
         li.innerText = input.value.trim();
         ul.append(li);
-        li.innerHTML +='<img class="image" src="assets/x.png">' 
+        li.innerHTML +='<img class="image" src="./assets/x.png">' 
         tasks.style.display = "block";
     }else{
         alert('Please enter something.');
@@ -39,12 +40,12 @@ btn.addEventListener("click", () => {
 })
 ul.addEventListener("mouseover", (e)=>{
     if(e.target.tagName==='IMG'){
-        e.target.src="assets/x2.png";
+        e.target.src="./assets/x2.png";
      }
 })
 ul.addEventListener("mouseout", (e)=>{
     if(e.target.tagName==='IMG'){
-        e.target.src="assets/x.png";
+        e.target.src="./assets/x.png";
      }
 })
 ul.addEventListener("click", (e)=>{
@@ -68,19 +69,19 @@ sort.addEventListener("click", ()=>{
     
     if (true) {
         if (!clc) {
-            sort.src = 'assets/asagi.png'
+            sort.src = './assets/asagi.png'
         }
         else {
-            sort.src = 'assets/yuxari.png'
+            sort.src = './assets/yuxari.png'
             
         }
     }
     else {
         if (clc) {           
-            sort.src = 'assets/ascending.png'
+            sort.src = './assets/ascending.png'
         }
         else {
-            sort.src = 'assets/descending.png'
+            sort.src = './assets/descending.png'
         }
         
     }
